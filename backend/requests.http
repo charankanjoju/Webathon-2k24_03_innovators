@@ -1,0 +1,71 @@
+###Register as student
+POST http://localhost:4000/student-api/new-student
+Content-Type: application/json
+
+{
+    "username":"charan",
+    "password":"charan",
+    "email":"charan@mail.com",
+    "rollno":"22071A56455",
+    "branch":"CSE",
+    "skills":["C","C++","Java","Python","Html","Css","Bootstap","JS"],
+    "phoneno":"1234567890"
+}
+###Login for student
+POST http://localhost:4000/student-api/login
+Content-Type: application/json
+
+{
+    "username":"charan",
+    "password":"charan"
+}
+###Register as alumini
+POST http://localhost:4000/alumini-api/new-alumini
+Content-Type: application/json
+
+{
+    "username":"Kushyanth",
+    "password":"Kushyanth",
+    "email":"Kushyanth@mail.com",
+    "rollno":"15071A35422",
+    "branch":"cse",
+    "passedOutYear":"2019",
+    "phoneno":"9876543210",
+    "skills":["C","C++","Java","Python","PyPy","Swift","Kotlin","Html","Css","JS","NodeJs","ReactJs","MongoDB"],
+    "workExperience":"3 Years",
+    "position":"Software Engineer"
+}
+###Login as alumini
+POST  http://localhost:4000/alumini-api/login
+Content-Type: application/json
+
+{
+    "username":"Kushyanth",
+    "password":"Kushyanth"
+}
+###Search for an alumini based on name
+GET http://localhost:4000/student-api/search-alumini/Kushyanth
+###Search alumini by skill
+GET http://localhost:4000/student-api/search/Java
+###Add jobs by alumini
+POST http://localhost:4000/alumini-api/post-job
+Content-Type: application/json
+
+{
+    "Type":"FullTimeJob",
+    "Role":"Analyst",
+    "Income":"1000000",
+    "Company":"JPMC"
+}
+###Get all the available jobs by student
+GET http://localhost:4000/student-api/getjob
+###Add events by alumini
+POST http://localhost:4000/alumini-api/addEvent
+Content-Type: application/json
+
+{
+    "nameOfEvent":"Designathon",
+    "Date":"20/2/24"
+}
+###Find events by student
+GET http://localhost:4000/student-api/getEvents

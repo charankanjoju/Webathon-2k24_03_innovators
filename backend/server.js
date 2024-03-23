@@ -1,0 +1,30 @@
+const exp=require('express')
+const path = require("path");
+const app=exp()
+const mongoClient=require('mongodb').MongoClient
+app.use(exp.json())
+mongoClient.connect('mongodb://localhost:27017')
+.then(client=>{
+    const webathondb=client.db('webathondb')
+    const students=webathondb.collection('students')
+    const alumini=webathondb.collection('alumini')
+    const jobs=webathondb.collection('jobs')
+    const events=webathondb.collection('events')
+    app.set('students',students)
+    app.set('alumini',alumini)
+    app.set('jobs',jobs)
+    app.set('events',events)
+    console.log('Database connection success')
+})
+.catch(err=>{console.log('Error in db connection',err)})
+app.use((err,req,res,next)=>{
+    res.send({errMessage:err.message})
+})
+const studentapp=require('./APIs/studentapi')
+const aluminiapp=require('./APIs/aluminiapi')
+app.use('/student-api',studentapp)
+app.use('/alumini-api',aluminiapp)
+//app.use(exp.static(path.join(__dirname, "../frontend/webathonapp/build/")))
+app.listen(4000,()=>{
+    console.log('Server on port number 4000')
+})
