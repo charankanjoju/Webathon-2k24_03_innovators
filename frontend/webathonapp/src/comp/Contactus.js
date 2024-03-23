@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./Contactus.css"
 function Contactus() {
   return (
     <div>
@@ -16,19 +16,20 @@ function Contactus() {
     <tr>
       <th scope="row">1</th>
       <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>6578753333</td>
+      <td>markjoshd@gmail.com</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>567890222</td>
+      <td>jacobnaiel@gmail.com</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <th scope="row">2</th>
+      <td>David</td>
+      <td>7898765098</td>
+      <td>davidght@gmail.com</td>
     </tr>
   </tbody>
 </table>

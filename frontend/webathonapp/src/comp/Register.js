@@ -1,8 +1,9 @@
 import React from 'react';
-
+import "./Register.css"
 function Register() {
   return (
-    <div className='container  justify-content-center allign-item-center col-sm-4 p-4 '>
+    <div className='body'>
+    <div className='container justify-content-center allign-item-center col-sm-4 p-4 '>
      <form>
      <fieldset class="row mb-3">
     <legend class="col-form-label col-sm-2 pt-0">Your cadre</legend>
@@ -10,7 +11,7 @@ function Register() {
       <div class="form-check ">
         <input class="form-check-input d-inline" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked/>
         <label class="form-check-label" for="gridRadios1">
-          Alumni
+          Alumini
         </label>
       </div>
       <div class="form-check">
@@ -60,6 +61,7 @@ function Register() {
   </div>
   <button type="submit" class="btn btn-primary">Register</button>
 </form>
+   </div>
    </div>
   );
 }

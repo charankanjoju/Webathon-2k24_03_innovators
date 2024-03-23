@@ -1,0 +1,14 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,#f9f9f9,#a09d9d);
+  }
+  .body{
+    background-repeat: repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://img.freepik.com/free-vector/illustration-university-graduates_53876-28466.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1711065600&semt=sph");
+  }
